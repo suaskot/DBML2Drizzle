@@ -9,7 +9,7 @@ const defaultDBMLCode = `Table users {
 }
 `;
 
-const defaulDrizzleCode = `export const users = pgTable(
+const defaultDrizzleCode = `export const users = pgTable(
   "users",
   {
     id: uuid("id").defaultRandom().notNull(),
@@ -18,10 +18,13 @@ const defaulDrizzleCode = `export const users = pgTable(
   }
   );
 `;
+
 const Container = () => {
-  const [editing, setEditing] = React.useState("DBML" || "Drizzle");
+  const [editing, setEditing] = React.useState<"DBML" | "Drizzle">("DBML");
   const [codeOfDBML, setCodeOfDBML] = React.useState(defaultDBMLCode);
-  const [codeOfDrizzle, setCodeOfDrizzle] = React.useState(defaulDrizzleCode);
+  const [codeOfDrizzle, setCodeOfDrizzle] = React.useState(defaultDrizzleCode);
+
+  console.log(editing, codeOfDrizzle, codeOfDBML);
 
   return (
     <div className="flex">
