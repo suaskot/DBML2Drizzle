@@ -12,13 +12,13 @@ const Panel: React.FC<PanelProps> = ({
   children,
 }) => {
   return (
-    <div className="w-[50vw] h-full bg-gray-900">
+    <div className="h-full bg-gray-900">
       <h2 className="m-4 text-2xl font-bold text-white">{title} Code</h2>
       <textarea
         onFocus={() => setEditing(title as "DBML" | "Drizzle")}
         onChange={(e) => setCode(e.target.value)}
         value={children}
-        className="bg-inherit m-4 p-2 border-2 border-gray-600 rounded-md flex w-[49vw] h-[91vh] relative"
+        className="relative flex w-full max-h-full px-4 py-3 border-2 border-gray-600 rounded-md min-h-[40rem] bg-inherit"
       />
     </div>
   );

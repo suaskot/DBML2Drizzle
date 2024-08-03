@@ -3,7 +3,7 @@ import Header from "./Header";
 
 function App() {
   return (
-    <main className="h-screen">
+    <main className="min-h-screen">
       <Header />
       <Converter />
     </main>

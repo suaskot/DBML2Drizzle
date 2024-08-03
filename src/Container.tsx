@@ -27,7 +27,7 @@ const Container = () => {
   console.log(editing, codeOfDrizzle, codeOfDBML);
 
   return (
-    <div className="flex">
+    <div className="grid h-full grid-cols-2 gap-2 p-2">
       <Panel setCode={setCodeOfDBML} setEditing={setEditing} title="DBML">
         {codeOfDBML}
       </Panel>
